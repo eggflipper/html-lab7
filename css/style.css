@@ -1,0 +1,153 @@
+    body{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    
+    
+    header {
+        background-color: rgb(92, 152, 220);
+        padding: 10px;
+        text-align: center;
+        background-size: contain ;
+        background-repeat: no-repeat;
+        background-position: left ;
+        
+    }
+    #wrapper{
+        font-family: Arial, sans-serif;
+        grid-template-columns: 150px 1fr; 
+        grid-template-rows: auto 1fr auto; 
+        grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    nav {
+        background-color: #89c6ed;
+        float: left;
+        width: 150px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        text-decoration: none;
+        padding: 20px;
+        display: block;
+        background-color: pink;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    nav a:link {
+        color:#ffffff
+    }
+    nav a:visited {
+        color: #eaeaea;
+    }   
+    nav a:hover {
+        color: #869dc7;
+        background-color: #eaeaea;
+    }
+   
+        main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+    
+    section {
+        flex: 1 1 45%;
+        padding: 15px;
+
+    }
+    section h2 {
+        color: #2d628a;
+        margin-bottom: 10px;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #7aaed3;
+        color: #1f2a71;
+    }
+    @media (max-width: 768px) 
+    { nav { 
+        float: none; 
+        width: 100%; 
+        text-align: center; 
+    } nav ul { 
+        display: flex; 
+        justify-content: center; 
+        flex-wrap: wrap; 
+    } 
+        nav a { 
+            padding: 10px 20px;
+            margin: 10px; 
+        } 
+    main { 
+                grid-template-columns: 1fr;
+            } 
+            #wrapper {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+            }
+        }
+@media (max-width: 480px) { 
+    header h1 { 
+        font-size: 1.5em; 
+        margin-left: 20px;  
+        font-family: Arial, sans-serif;
+        color: #1f2a71;
+    } 
+    nav{
+        text-align: left;
+        float:none;
+        width: 100%;
+    }
+    nav a { 
+        padding: 8px 15px; 
+    } 
+     section { 
+        flex: 1 1 100%; 
+        padding: 10px; } 
+        nav ul { 
+            flex-direction: column; 
+            justify-content: flex-start;
+            width: 100%;
+            padding-left: 0;
+            display: block;
+    } 
+    nav li{
+        width: 100%;
+    }
+        nav a { 
+            padding: 10px; 
+            width: 100%; 
+            background-color: #89c6ed;
+            
+        }
+    main {
+        grid-template-columns: 1fr;
+    }
+  
+    }
+img{
+    float: right;
+}
